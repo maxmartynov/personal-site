@@ -1,10 +1,10 @@
 {
-  "name": "angularfire-seed",
-  "description": "A starter project for Angular + Firebase with AngularFire",
-  "version": "1.0.0",
-  "homepage": "https://github.com/firebase/angularfire-seed",
+  "name": "mmaxs",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "https://github.com/MartynovMax/mmaxs",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "dependencies": {
     "angular": "~1.3.8",
     "angular-route": "~1.3.8",
