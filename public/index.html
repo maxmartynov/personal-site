@@ -3,13 +3,160 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Martynov Max</title>
-  <meta name="description" content="Martynov Max. Software develper">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Max Martynov - JS Software Developer</title>
+  <meta name="title" content="Max Martynov - JS Software Developer">
+  <meta name="description" content="Web &amp; Mobile Software Developer (JavaScript / Angular / Ionic / Node)">
+
+  <meta property="og:title" content="Max Martynov - JS Software Developer">
+  <meta property="og:description" content="Web &amp; Mobile Software Developer (JavaScript / Angular / Ionic / Node)">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mmaxs.com">
+  <!-- <meta property="og:image" content=""> -->
+
+  <link rel="shortcut icon" href="http://mmaxs.com/assets/img/favicon.png" type="image/png">
+
+
+  <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./vendor/Skeleton/css/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="./styles/home.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Arimo|Open+Sans" rel="stylesheet">
 </head>
-<body>
-  <h4>
-    It will be something great! (may be)
-  </h4>
+
+<body class="home container">
+  <div class="wrap row">
+    <div class="header row">
+      <div class="locale-buttons">
+        <a id="js-locale-en" class="active">
+          en
+        </a>
+        <div class="vr">&nbsp;</div>
+        <a id="js-locale-ru">
+          ru
+        </a>
+      </div>
+
+      <div class="row">
+        <h5 class="row logo">
+          Max Martynov
+        </h5>
+
+        <p class="row under-logo">
+          Web &amp; Mobile Developer 
+        </p>
+      </div>
+    </div>
+
+    <div class="content row clearfix">
+      <div id="js-description-en" class="row">
+        <hr class="divider-horisontal">
+
+        <p class="seven columns">
+          I'm an independent Web Developer. Most of my experience is 
+          related with development of technical parts of startups. I worked in 
+          developer teams on positions Full-Stack developer, Team Leader and 
+          Project Manager.
+        </p>
+
+        <p class="seven columns">
+          If you have any enquiries please feel free to get in touch. 
+          I'm available for freelancing.
+        </p>
+      </div>
+
+      <div id="js-description-ru" class="row hidden">
+        <hr class="divider-horisontal">
+        
+        <p class="seven columns">
+          Я независимый веб-разработчик. Мой основной опыт работы связан 
+          с разработкой технической части стартапов, в том числе в составе команды  
+          на позициях Full-Stack разработчика, лидера команды и менеджера проектов.
+        </p>
+        
+        <p class="seven columns">
+          Я открыт для предложений, в том числе для работы на фрилансе. 
+        </p>
+      </div>
+
+      <div class="row">
+        <ul class="social-links">
+          <li>
+            <a href="https://www.upwork.com/o/profiles/users/_~012c83620f32b092b6/">
+              <img src="assets/img/logo-upwork.svg">
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/MartynovMax">
+              <img src="assets/img/logo-github.svg">
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:martynov.max.s@gmail.com">
+              <img src="assets/img/logo-mail.svg">
+            </a>
+          </li>
+        </ul>      
+      </div>      
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <div class="copyright row">
+      © 2016
+    </div>
+  </div>
+
+
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', ready);
+
+    function ready() {
+      var selectors = {
+        btn_en: 'js-locale-en',
+        btn_ru: 'js-locale-ru',
+        description_en: 'js-description-en',
+        description_ru: 'js-description-ru',
+      };
+
+      document.getElementById(selectors.btn_en).addEventListener('click', setLocaleEn);
+      document.getElementById(selectors.btn_ru).addEventListener('click', setLocaleRu);
+
+      function setLocaleEn() {
+        setLocale('en');
+      }
+
+      function setLocaleRu() {
+        setLocale('ru');
+      }
+
+      function setLocale(newLocale) {
+        var currentLocale = newLocale === 'en' ? 'ru' : 'en';
+
+        var currentDesc = document
+          .getElementById(selectors['description_' + currentLocale])
+          .classList.add('hidden');
+        
+        var newDesc = document
+          .getElementById(selectors['description_' + newLocale])
+          .classList.remove('hidden');
+
+        var currentBtn = document
+          .getElementById(selectors['btn_' + currentLocale])
+          .classList.remove('active');
+        
+        var newBtn = document
+          .getElementById(selectors['btn_' + newLocale])
+          .classList.add('active');
+      }
+    }
+  </script>
+
+
 </body>
 </html>
