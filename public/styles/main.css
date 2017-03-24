@@ -4,7 +4,6 @@ body {
   font-family: 'Open Sans', sans-serif;
 } 
 
-
 html, 
 body, 
 .wrap {
@@ -19,38 +18,40 @@ body > .wrap {
 
 
 
-.home .header {
+.header {
   padding: 1rem 0;
 }
 
-.home .header .logo {
+.header .logo {
   margin: 0;
   font-weight: bold;
   font-family: 'Open Sans', sans-serif;
+  height: 1.5em;
 }
 
-.home .header .under-logo {
+.header .under-logo {
   margin: 0;
   font-size: 1.1rem;
-  line-height: 1.1em;
+  line-height: 1.1rem;
   font-family: 'Arimo', sans-serif;
+  color: #525252;
 }
 
-.home .header .locale-buttons {
+.header .locale-buttons {
   float: right;
   padding: 1rem 1rem 0 0;
 }
 
-.home .header .locale-buttons a {
+.header .locale-buttons a {
   color: #bbb;
   font-size: 1.6rem;  
 }
 
-.home .header .locale-buttons a.active {
+.header .locale-buttons a.active {
   color: #1EAEDB;
 }
 
-.home .header .locale-buttons a:hover {
+.header .locale-buttons a:hover {
   cursor: pointer;
   color: #22CFFF;
   opacity: 0.7;
@@ -58,7 +59,7 @@ body > .wrap {
   -webkit-transition: all 0.3s cubic-bezier(0.48,0.25,0.35,0.98);
 }
 
-.home .header .locale-buttons .vr {
+.header .locale-buttons .vr {
   width: 1px;
   background-color: #d8d8d8;
   display: inline-block;
@@ -66,58 +67,22 @@ body > .wrap {
 
 
 
-.home .content {
+.main-content {
   padding-top: 5rem;
   padding-bottom: 2rem; /* footer height */
 }
 
-.home .content .divider-horisontal {
-  width: 7rem;
-  display: block;
-  clear: both;
-  margin: 0;
-  padding: 0 0 1rem 0;
-  border-color: #bbb;
-}
-
-.home .content p {
-  text-indent: 1.2rem;
-  font-family: 'Arimo', sans-serif;
-}
 
 
 
-.home ul.social-links {
-  list-style: none;
-  text-align: center;
-  padding-top: 4rem;
-}
-
-.home ul.social-links li {
-  display: inline-block;
-  padding: 0 1rem; 
-  margin: 0;
-}
-
-.home ul.social-links li a img {
-  width: 3.5rem;
-}
-
-.home ul.social-links li:hover a img {
-  opacity: 0.7;
-  transition: all 0.3s cubic-bezier(0.48,0.25,0.35,0.98);
-  -webkit-transition: all 0.3s cubic-bezier(0.48,0.25,0.35,0.98);
-}
-
-
-.home .footer {
+.footer {
   position: relative;
   margin-top: -2rem; /* footer height */
   height: 2rem; /* footer height */
   clear:both;
 }
 
-.home .footer .copyright {
+.footer .copyright {
   float: right;
   padding-right: 1rem;
   font-size: 1.2rem; 

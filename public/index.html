@@ -1,162 +1,91 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" ng-app="App">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Max Martynov - JS Software Developer</title>
-  <meta name="title" content="Max Martynov - JS Software Developer">
-  <meta name="description" content="Web &amp; Mobile Software Developer (JavaScript / Angular / Ionic / Node)">
+    <base href="/">
 
-  <meta property="og:title" content="Max Martynov - JS Software Developer">
-  <meta property="og:description" content="Web &amp; Mobile Software Developer (JavaScript / Angular / Ionic / Node)">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mmaxs.com">
-  <!-- <meta property="og:image" content=""> -->
+    <title>Max Martynov - JS Software Developer</title>
 
-  <link rel="shortcut icon" href="http://mmaxs.com/assets/img/favicon.png" type="image/png">
+    <meta name="title" content="Max Martynov - JS Software Developer">
+    <meta name="description" content="Web &amp; Mobile Software Developer (JavaScript / Angular / Ionic / Node)">
+
+    <meta property="og:title" content="Max Martynov - JS Software Developer">
+    <meta property="og:description" content="Web &amp; Mobile Software Developer (JavaScript / Angular / Ionic / Node)">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mmaxs.com">
+    <!-- <meta property="og:image" content=""> -->
+
+    <link rel="shortcut icon" href="http://mmaxs.com/assets/img/favicon.png" type="image/png">
 
 
-  <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
-  <link rel="stylesheet" type="text/css" href="./vendor/Skeleton/css/skeleton.css">
-  <link rel="stylesheet" type="text/css" href="./styles/home.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendor/Skeleton/css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="app/pages/home/home.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Arimo|Open+Sans" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Arimo|Open+Sans" rel="stylesheet">
 
-<body class="home container">
-  <div class="wrap row">
-    <div class="header row">
-      <div class="locale-buttons">
-        <a id="js-locale-en" class="active">
-          en
-        </a>
-        <div class="vr">&nbsp;</div>
-        <a id="js-locale-ru">
-          ru
-        </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.15.1/angular-translate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-dynamic-locale/0.1.32/tmhDynamicLocale.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-url/2.15.1/angular-translate-loader-url.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-static-files/2.15.1/angular-translate-loader-static-files.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.3/angular-locale_en-us.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.3/angular-locale_ru-ru.min.js"></script>
+
+
+    <!-- <script src="lib/angular-translate/angular-translate.min.js"></script> -->
+    <!-- <script src="lib/angular-dynamic-locale/dist/tmhDynamicLocale.min.js"></script> -->
+    <!-- <script src="lib/angular-translate-loader-url/angular-translate-loader-url.min.js"></script> -->
+    <!-- <script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script> -->
+
+
+    <script src="app/helpers/dependencies.cdn.js"></script>
+    <script src="app/helpers/utils.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/app.constants.js"></script>
+    <script src="app/pages/home/HomeCtrl.js"></script>
+  </head>
+
+  <body class="container">
+    <div class="wrap row">
+      <div class="header row">
+        <div class="locale-buttons">
+          <a id="js-locale-en" class="active">
+            en
+          </a>
+          <div class="vr">&nbsp;</div>
+          <a id="js-locale-ru">
+            ru
+          </a>
+        </div>
+
+        <div class="row">
+          <h5 class="row logo">
+            Max Martynov
+          </h5>
+
+          <p class="row under-logo">
+            Web &amp; Mobile Developer 
+          </p>
+        </div>
       </div>
 
-      <div class="row">
-        <h5 class="row logo">
-          Max Martynov
-        </h5>
-
-        <p class="row under-logo">
-          Web &amp; Mobile Developer 
-        </p>
-      </div>
+      <ui-view class="row clearfix main-content"></ui-view>
     </div>
 
-    <div class="content row clearfix">
-      <div id="js-description-en" class="row">
-        <hr class="divider-horisontal">
-
-        <p class="seven columns">
-          I'm an independent Web Developer. Most of my experience is 
-          related with development of technical parts of startups. I worked in 
-          developer teams on positions Full-Stack developer, Team Leader and 
-          Project Manager.
-        </p>
-
-        <p class="seven columns">
-          If you have any enquiries please feel free to get in touch. 
-          I'm available for freelancing.
-        </p>
+    <div class="footer">
+      <div class="copyright row">
+        © 2016
       </div>
-
-      <div id="js-description-ru" class="row hidden">
-        <hr class="divider-horisontal">
-        
-        <p class="seven columns">
-          Я независимый веб-разработчик. Мой основной опыт работы связан 
-          с разработкой технической части стартапов, в том числе в составе команды  
-          на позициях Full-Stack разработчика, лидера команды и менеджера проектов.
-        </p>
-        
-        <p class="seven columns">
-          Я открыт для предложений, в том числе для работы на фрилансе. 
-        </p>
-      </div>
-
-      <div class="row">
-        <ul class="social-links">
-          <li>
-            <a href="https://www.upwork.com/o/profiles/users/_~012c83620f32b092b6/">
-              <img src="assets/img/logo-upwork.svg">
-            </a>
-          </li>
-
-          <li>
-            <a href="https://github.com/MartynovMax">
-              <img src="assets/img/logo-github.svg">
-            </a>
-          </li>
-
-          <li>
-            <a href="mailto:martynov.max.s@gmail.com">
-              <img src="assets/img/logo-mail.svg">
-            </a>
-          </li>
-        </ul>      
-      </div>      
     </div>
-  </div>
-
-
-  <div class="footer">
-    <div class="copyright row">
-      © 2016
-    </div>
-  </div>
-
-
-
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', ready);
-
-    function ready() {
-      var selectors = {
-        btn_en: 'js-locale-en',
-        btn_ru: 'js-locale-ru',
-        description_en: 'js-description-en',
-        description_ru: 'js-description-ru',
-      };
-
-      document.getElementById(selectors.btn_en).addEventListener('click', setLocaleEn);
-      document.getElementById(selectors.btn_ru).addEventListener('click', setLocaleRu);
-
-      function setLocaleEn() {
-        setLocale('en');
-      }
-
-      function setLocaleRu() {
-        setLocale('ru');
-      }
-
-      function setLocale(newLocale) {
-        var currentLocale = newLocale === 'en' ? 'ru' : 'en';
-
-        var currentDesc = document
-          .getElementById(selectors['description_' + currentLocale])
-          .classList.add('hidden');
-        
-        var newDesc = document
-          .getElementById(selectors['description_' + newLocale])
-          .classList.remove('hidden');
-
-        var currentBtn = document
-          .getElementById(selectors['btn_' + currentLocale])
-          .classList.remove('active');
-        
-        var newBtn = document
-          .getElementById(selectors['btn_' + newLocale])
-          .classList.add('active');
-      }
-    }
-  </script>
-
-
-</body>
+  </body>
 </html>
