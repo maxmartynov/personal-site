@@ -19,37 +19,21 @@
     <!-- <meta property="og:image" content=""> -->
 
     <link rel="shortcut icon" href="http://mmaxs.com/assets/img/favicon.png" type="image/png">
-
-
-    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-    <link rel="stylesheet" type="text/css" href="vendor/Skeleton/css/skeleton.css">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="app/pages/home/home.css">
-
     <link href="https://fonts.googleapis.com/css?family=Arimo|Open+Sans" rel="stylesheet">
 
+    <!-- dependencies-css:css -->
+    <link rel="stylesheet" href="vendor/normalize/normalize.css">
+    <link rel="stylesheet" href="vendor/Skeleton/css/skeleton.css">
+    <!-- endinject -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.15.1/angular-translate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-static-files/2.15.1/angular-translate-loader-static-files.min.js"></script>
+    <!-- styles:css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="app/pages/home/home.css">
+    <!-- endinject -->
 
 
     <!-- <script src="lib/angular-translate/angular-translate.min.js"></script> -->
-    <!-- <script src="lib/angular-dynamic-locale/dist/tmhDynamicLocale.min.js"></script> -->
-    <!-- <script src="lib/angular-translate-loader-url/angular-translate-loader-url.min.js"></script> -->
     <!-- <script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script> -->
-
-
-    <script src="app/helpers/dependencies.cdn.js"></script>
-    <script src="app/helpers/utils.js"></script>
-
-    <script src="app/app.js"></script>
-    <script src="app/app.config.js"></script>
-    <script src="app/app.routes.js"></script>
-    <script src="app/app.constants.js"></script>
-    <script src="app/pages/home/HomeCtrl.js"></script>
-    <script src="app/factories/$localStorage.js"></script>
   </head>
 
   <body class="container">
@@ -86,5 +70,30 @@
         © 2016
       </div>
     </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.15.1/angular-translate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-static-files/2.15.1/angular-translate-loader-static-files.min.js"></script>
+
+
+    <!-- dependencies-js:js -->
+    <!-- endinject -->
+
+    <!-- app:js -->1
+    <script src="app/helpers/utils.js"></script>
+    <script src="app/helpers/dependencies.cdn.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/app.constants.js"></script>
+    <!-- endinject -->
+
+    <!-- components:js -->
+    <script src="app/pages/home/HomeCtrl.js"></script>
+    <script src="app/factories/$localStorage.js"></script>
+    <!-- endinject -->
   </body>
 </html>
