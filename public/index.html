@@ -32,11 +32,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.15.1/angular-translate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-dynamic-locale/0.1.32/tmhDynamicLocale.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-url/2.15.1/angular-translate-loader-url.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-static-files/2.15.1/angular-translate-loader-static-files.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.3/angular-locale_en-us.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.3/angular-locale_ru-ru.min.js"></script>
 
 
     <!-- <script src="lib/angular-translate/angular-translate.min.js"></script> -->
@@ -53,17 +49,20 @@
     <script src="app/app.routes.js"></script>
     <script src="app/app.constants.js"></script>
     <script src="app/pages/home/HomeCtrl.js"></script>
+    <script src="app/factories/$localStorage.js"></script>
   </head>
 
   <body class="container">
     <div class="wrap row">
       <div class="header row">
         <div class="locale-buttons">
-          <a id="js-locale-en" class="active">
+          <a ng-click="setLang('en-us')" 
+             ng-class="{'active': currentLang === 'en-us'}">
             en
           </a>
           <div class="vr">&nbsp;</div>
-          <a id="js-locale-ru">
+          <a ng-click="setLang('ru-ru')"
+             ng-class="{'active': currentLang === 'ru-ru'}">
             ru
           </a>
         </div>

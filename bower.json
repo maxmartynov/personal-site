@@ -10,9 +10,7 @@
     "firebase": "2.2.2",
     "angularfire": "1.2.0",
     "angular-ui-router": "0.4.2",
-    "angular-dynamic-locale": "^0.1.32",
     "angular-translate": "^2.15.1",
-    "angular-translate-loader-static-files": "^2.15.1",
-    "angular-translate-loader-url": "^2.15.1"
+    "angular-translate-loader-static-files": "^2.15.1"
   }
 }
