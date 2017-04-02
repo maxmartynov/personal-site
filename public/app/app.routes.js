@@ -3,8 +3,8 @@
 
   angular.module('App').config(routes);
 
-  routes.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider', '$qProvider', 'tmhDynamicLocaleProvider', '$translateProvider', 'defaultLanguage'];
-  function routes($stateProvider, $urlRouterProvider, $locationProvider, $qProvider, tmhDynamicLocaleProvider, $translateProvider, defaultLanguage) {
+  routes.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider', '$qProvider'];
+  function routes($stateProvider, $urlRouterProvider, $locationProvider, $qProvider) {
     $stateProvider
       .state('home', home);
 
@@ -21,15 +21,6 @@
         return newPath; 
       } 
     });
-
-
-    tmhDynamicLocaleProvider.localeLocationPattern('app/locales/angular-locale_{{locale}}.js');
-    $translateProvider
-      .useStaticFilesLoader({
-        prefix: 'app/i18n/',
-        suffix: '.json',
-      });
-    $translateProvider.preferredLanguage(defaultLanguage);
   }
 
 
