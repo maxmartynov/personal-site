@@ -1,4 +1,4 @@
-import i18n from '../i18n/index'
+import i18n from '@/i18n/index'
 import * as Types from './types'
 
 export const setLanguage = ({ commit }, value) => {

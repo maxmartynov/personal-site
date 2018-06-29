@@ -1,5 +1,5 @@
 <style scoped lang="less">
-  @import url("../styles/_variables.less");
+  @import url("~@/styles/_variables.less");
 
   .app-container {
     min-height: 100%;
@@ -26,9 +26,9 @@
 </template>
 
 <script>
-  import AppHeader from './App.header.vue'
-  import AppContent from './App.content.vue'
-  import AppFooter from './App.footer.vue'
+  import AppHeader from '@/components/App.header.vue'
+  import AppContent from '@/components/App.content.vue'
+  import AppFooter from '@/components/App.footer.vue'
 
   export default {
     components: {
@@ -45,4 +45,3 @@
     }
   }
 </script>
-

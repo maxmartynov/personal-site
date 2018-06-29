@@ -1,5 +1,5 @@
 <style scoped lang="less">
-  @import url("../styles/_variables.less");
+  @import url("~@/styles/_variables.less");
 
   /* Larger than mobile */
   @media (max-width: 400px) {
@@ -12,22 +12,48 @@
     margin-top: @app-header-margin-top;
     position: relative;
 
-    .logo {
-      margin: 0;
-      font-weight: bold;
-      font-family: 'Open Sans', sans-serif;
-      letter-spacing: 1px;
-      font-size: 1.8em;
-    }
+    .logo-wrapper {
+      display: inline-block;
 
-    .sub-logo {
-      margin: 0;
-      font-size: 1.1rem;
-      line-height: 1.1rem;
-      font-family: 'Arimo', sans-serif;
-      color: #525252;
-      letter-spacing: normal;
-      margin-left: 1px;
+      .logo {
+        margin: 0;
+        font-weight: 600;
+        font-family: @font-family-base;
+        letter-spacing: 1px;
+        font-size: 1.8em;
+        color: @color-grey-darken-4;
+
+        &:hover {
+          color: @color-grey-darken-3;
+          transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
+          -webkit-transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
+          -moz-transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
+          -o-transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
+        }
+      }
+
+      .sub-logo {
+        margin: 0;
+        font-size: 1.1rem;
+        line-height: 1.1rem;
+        font-family: @font-family-base, ;
+        color: @color-grey-darken-4;
+        letter-spacing: normal;
+        margin-left: 1px;
+
+        &.animate-rotate {
+          transition-delay: 0s;
+          transition-duration: 0.5s;
+          transition-property: transform;
+          transition-timing-function: cubic-bezier(0.25, 0.8, 0.5, 1);
+          transform-origin: left bottom;
+        }
+      }
+
+      .logo:hover + .sub-logo,
+      .sub-logo:hover {
+        transform: rotate(10deg);
+      }
     }
 
     .locale-buttons {
@@ -37,26 +63,26 @@
       padding: 0.5em 0 0 0;
 
       a {
-        color: #bbb;
+        color: @color-grey-lighten-1;
         font-size: 1em;
 
         &.active {
-          color: #1EAEDB;
+          color: @color-blue-lighten-1;
         }
         &:hover {
           cursor: pointer;
-          color: #22CFFF;
+          color: @color-light-blue-base;
           opacity: 0.7;
-          transition: all 0.3s cubic-bezier(0.48, 0.25, 0.35, 0.98);
-          -webkit-transition: all 0.3s cubic-bezier(0.48, 0.25, 0.35, 0.98);
-          -moz-transition: all 0.3s cubic-bezier(0.48, 0.25, 0.35, 0.98);
-          -o-transition: all 0.3s cubic-bezier(0.48, 0.25, 0.35, 0.98);
+          transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
+          -webkit-transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
+          -moz-transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
+          -o-transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
         }
       }
 
       .vr {
         width: 1px;
-        background-color: #d8d8d8;
+        background-color: @color-grey-lighten-1;
         display: inline-block;
       }
     }
@@ -65,23 +91,23 @@
 
 <template>
   <div class="header row">
-    <div class="row">
+    <div class="logo-wrapper row">
       <h1 class="row logo">
         Max Martynov
       </h1>
 
-      <h2 class="row sub-logo">
-        Web &amp; Mobile Developer 
+      <h2 class="row sub-logo animate-rotate">
+        Web &amp; Mobile Developer
       </h2>
     </div>
 
-    <div class="locale-buttons">
+    <div class="locale-buttons unselectable">
       <a
         @click="setLanguage('en'); analyticsEvent('language.btn', 'en')"
         :class="{'active': currentLanguage === 'en'}">
         EN
       </a>
-      
+
       <div class="vr">&nbsp;</div>
 
       <a
@@ -117,4 +143,3 @@
     }
   }
 </script>
-
