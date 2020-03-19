@@ -1,22 +1,34 @@
+import _ from 'lodash'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
-
-import state from './state'
-import * as actions from './actions'
-import mutations from './mutations'
-import * as getters from './getters'
+import i18n from '@/i18n'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state,
-  actions,
-  mutations,
-  getters,
+  modules: {},
+  state: {
+    availableLanguages: ['en', 'ru'],
+    currentLanguage: 'en'
+  },
+  actions: {
+    setLanguage ({ commit }, value) {
+      i18n.locale = value
+      commit('setLanguage', value)
+    }
+  },
+  mutations: {
+    setLanguage (state, value) {
+      _.set(state, 'currentLanguage', value)
+    }
+  },
   strict: process.env.NODE_ENV !== 'production',
   plugins: [
+
     // use localStorage
-    createPersistedState()
+    createPersistedState({
+      key: `${process.env.VUE_APP_APP_NAME}-storage`
+    })
   ]
 })
