@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
@@ -20,7 +19,7 @@ export default new Vuex.Store({
   },
   mutations: {
     setLanguage (state, value) {
-      _.set(state, 'currentLanguage', value)
+      state.currentLanguage = value
     }
   },
   strict: process.env.NODE_ENV !== 'production',

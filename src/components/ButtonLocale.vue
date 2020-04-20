@@ -46,10 +46,11 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 @import url("~@/styles/_variables.less");
 
-@color-active: @color-blue-lighten-1;
+@color-active: @color-blue-lighten-2;
+@color-hover: @color-blue-base;
 @color-default: @color-grey-lighten-1;
 
 .btn-locale {
@@ -101,8 +102,10 @@ export default {
 
     span {
       line-height: 2.1em;
-      font-family: @font-family-base;
+      font-family: @font-family-primary;
       font-size: 1em;
+      font-weight: 400;
+      letter-spacing: 1px;
       position: absolute;
       width: 50%;
       text-align: center;
@@ -122,7 +125,7 @@ export default {
       }
 
       &:hover {
-        color: @color-light-blue-base !important;
+        color: @color-hover !important;
         opacity: 0.7;
       }
     }

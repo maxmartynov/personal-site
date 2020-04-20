@@ -5,12 +5,13 @@
       <a
         target="blank"
         :href="links.upwork"
-        @click="analyticsEvent('press', 'contact.btn', 'upwork')">
+        @click="analyticsEvent('press', 'contact.btn', 'upwork')"
+        rel="external">
 
         <img
           :src="require('@/assets/img/logo-upwork.svg')"
           alt="Upwork"
-          title="Upwork">
+          title="Upwork"/>
       </a>
     </li>
 
@@ -18,12 +19,13 @@
       <a
         target="blank"
         :href="links.github"
-        @click="analyticsEvent('press', 'contact.btn', 'github')">
+        @click="analyticsEvent('press', 'contact.btn', 'github')"
+        rel="external">
 
         <img
           :src="require('@/assets/img/logo-github.svg')"
           alt="GitHub"
-          title="GitHub">
+          title="GitHub"/>
       </a>
     </li>
 
@@ -32,12 +34,13 @@
         class="social-link-instagram"
         target="blank"
         :href="links.instagram"
-        @click="analyticsEvent('press', 'contact.btn', 'instagram')">
+        @click="analyticsEvent('press', 'contact.btn', 'instagram')"
+        rel="external">
 
         <img
           :src="require('@/assets/img/logo-instagram.svg')"
           alt="Instagram"
-          title="Instagram">
+          title="Instagram"/>
       </a>
     </li>
 
@@ -46,24 +49,26 @@
         class="social-link-stackexchange"
         target="blank"
         :href="links.stackexchange"
-        @click="analyticsEvent('press', 'contact.btn', 'stackexchange')">
+        @click="analyticsEvent('press', 'contact.btn', 'stackexchange')"
+        rel="external">
 
         <img
           :src="require('@/assets/img/logo-stackexchange.svg')"
           alt="Stack Exchange"
-          title="Stack Exchange">
+          title="Stack Exchange"/>
       </a>
     </li>
 
     <li>
       <a
         :href="`mailto:${links.email}`"
-        @click="analyticsEvent('press', 'contact.btn', 'email')">
+        @click="analyticsEvent('press', 'contact.btn', 'email')"
+        rel="external">
 
         <img
           :src="require('@/assets/img/logo-mail.svg')"
           alt="Email"
-          title="Email">
+          title="Email"/>
       </a>
     </li>
   </ul>
@@ -106,9 +111,10 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 .contacts-block {
   text-align: center;
+  animation: fadein .5s;
 
   .social-buttons {
     list-style: none;
@@ -119,7 +125,7 @@ export default {
 
     li {
       display: inline-block;
-      padding: 0 1rem 1rem;
+      padding: 0 1rem;
       margin: 0;
       cursor: pointer;
 
@@ -131,11 +137,9 @@ export default {
           display: inline-block;
           vertical-align: middle;
           width: 1.7em;
+          height: auto;
           opacity: 0.9;
-          transition: all 0.2s ease-out;
-          -webkit-transition: all 0.2s ease-out;
-          -moz-transition: all 0.2s ease-out;
-          -o-transition: all 0.2s ease-out;
+          transition: opacity 0.2s ease-out;
         }
 
         &.social-link-instagram img {

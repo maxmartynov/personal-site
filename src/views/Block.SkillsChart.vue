@@ -17,53 +17,74 @@
 
 <script>
 const SKILLS = [
-  ['JavaScript', 95],
-  ['HTML/CSS', 90],
-
-  // ['divider'],
-
-  // ['Vue.js', 90],
-  // ['AngularJS', 75],
-  // ['Ionic', 70],
+  ['JavaScript', 97],
+  ['HTML/CSS', 96],
 
   ['divider'],
 
-  ['Wireframing', 50],
-  ['Prototyping', 75],
-  ['DevOps', 80],
-  ['Machine Learning', 55],
+  ['Vue.js', 90],
+  ['AngularJS', 77],
+  ['Ionic Framework', 80],
+  ['Node.js', 87],
 
   ['divider'],
 
-  ['Communication', 95],
-  ['Project Documentation Writing', 90],
+  // ['Wireframing', 50],
+  // ['Prototyping', 75],
+  // ['Machine Learning', 55],
+  ['Design', 70],
+  ['DevOps', 60],
 
-  ['divider']
+  ['divider'],
+
+  ['Communication', 90],
+  ['Self-management', 87],
+  ['Team management', 80],
+
+  ['divider'],
+
+  ['Charts making', 200]
 ]
 
 export default {
-  props: {
-    isShowChart: {
-      type: Boolean
-    }
-  },
   data () {
     return {
+      isShowChart: false,
       skills: SKILLS
     }
+  },
+  mounted () {
+    setTimeout(() => this.isShowChart = true, 50)
   }
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 @import url("~@/styles/_variables.less");
 
 .skills-chart {
+  padding: 0 1rem;
+
   ul {
     list-style: none;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: -15px;
+      bottom: -15px;
+      display: block;
+      width: 100%;
+      border-right: 1px solid @color-grey-lighten-1;
+      z-index: 0;
+    }
 
     li {
       display: block;
+      position: relative;
+      z-index: 2;
       width: 0%;
       height: 2.5rem;
       line-height: 3.2rem;
@@ -76,14 +97,13 @@ export default {
       font-size: 1.3rem;
       background-color: @color-grey-darken-4;
       color: #fff;
-      font-family: 'Raleway', sans-serif;
+      font-family: @font-family-primary;
       letter-spacing: 1px;
-      overflow: hidden;
+      overflow: visible;
       white-space: nowrap;
-      transition: all 0.5s ease-out;
-      -webkit-transition: all 0.5s ease-out;
-      -moz-transition: all 0.5s ease-out;
-      -o-transition: all 0.5s ease-out;
+      transition-property: max-width;
+      transition-duration: 0.8s;
+      transition-timing-function: ease-out;
 
       &.divider {
         width: 100%;
@@ -102,7 +122,7 @@ export default {
 
     &.visible {
       li {
-        max-width: 100% !important;
+        max-width: 200% !important;
       }
     }
   }

@@ -40,19 +40,37 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 @import url("~@/styles/_variables.less");
 
 .app-container {
   height: 100vh;
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
 
   > .wrap {
-    overflow: hidden;
     position: relative;
-    height: calc(100% - @footer__height);
+    height: calc(100% - @app-footer__height);
+  }
+}
+
+@media (max-width: 550px) {
+  .app-container {
+    overflow: hidden;
+
+    > .wrap {
+      height: calc(100% - @app-footer__height--small);
+    }
+  }
+}
+
+@media (max-height: 550px) {
+  .app-container {
+    overflow: hidden;
+
+    > .wrap {
+      height: calc(100% - @app-footer__height--extra-small);
+    }
   }
 }
 </style>

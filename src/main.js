@@ -1,28 +1,22 @@
 import Vue from 'vue'
 import VueGtag from 'vue-gtag'
 import Vuex from 'vuex'
-import VueRouter from 'vue-router'
 
 import '@/styles/vendor/normalize/normalize.css'
 import '@/styles/vendor/Skeleton/skeleton.css'
-import '@/styles/general.less'
+import '@/styles/index.less'
 
-import routes from '@/routes'
+import router from '@/router'
 import store from '@/store'
 import i18n from '@/i18n'
 import App from '@/App.vue'
 
 Vue.use(Vuex)
-Vue.use(VueRouter)
 Vue.use(VueGtag, {
   config: {
     id: process.env.VUE_APP_GOOGLE_ANALYTICS_ID
-  }
-})
-
-const router = new VueRouter({
-  mode: 'history',
-  routes
+  },
+  enabled: process.env.NODE_ENV === 'production'
 })
 
 new Vue({
@@ -33,9 +27,7 @@ new Vue({
 }).$mount('#app')
 
 // prevent automatically showing the prompt "Add to home screen"
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault()
-})
+window.addEventListener('beforeinstallprompt', (e) => e.preventDefault())
 
 Vue.config.lang = store.state.currentLanguage
 Vue.config.productionTip = false

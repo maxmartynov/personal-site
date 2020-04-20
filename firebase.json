@@ -2,12 +2,35 @@
   "hosting": {
     "public": "dist",
     "ignore": [
+      "**/.*",
+      "**/node_modules/**",
       "firebase.json",
       "src",
       "public",
       "build",
-      "**/.*",
-      "**/node_modules/**"
+      "README.md",
+      "babel.config.js",
+      "package-lock.json",
+      "package.json",
+      "postcss.config.js",
+      "vue.config.js"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(js|css|jpg|jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=86400"
+          }
+        ]
+      }
     ]
   }
 }

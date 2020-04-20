@@ -29,7 +29,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import ButtonLocale from './ButtonLocale.vue'
+import ButtonLocale from '@/components/ButtonLocale.vue'
 
 export default {
   components: {
@@ -59,22 +59,22 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 @import url("~@/styles/_variables.less");
 
 .page-header {
-  height: @header__height;
-  max-height: @header__height;
+  height: @app-header__height;
+  max-height: @app-header__height;
   position: relative;
 
   .logo-wrapper {
-    padding-top: @header__padding-top;
+    padding-top: @app-header__padding-top;
     display: inline-block;
 
     .logo {
       margin: 0;
       font-weight: 600;
-      font-family: @font-family-base;
+      font-family: @font-family-primary;
       letter-spacing: 1px;
       font-size: 1.8em;
       color: @color-grey-darken-4;
@@ -92,7 +92,7 @@ export default {
       margin: 0;
       font-size: 1.1rem;
       line-height: 1.3rem;
-      font-family: @font-family-base;
+      font-family: @font-family-primary;
       color: @color-grey-darken-4;
       letter-spacing: normal;
       margin-left: 1px;
@@ -116,18 +116,18 @@ export default {
   .btn-locale {
     position: absolute;
     right: 0;
-    top: calc(@header__padding-top + 0.5em);
+    top: calc(@app-header__padding-top + 0.5em);
   }
 }
 
 @media (max-width: 400px) {
   .header {
     .logo-wrapper {
-      padding-top: @header__padding-top * 1.7;
+      padding-top: @app-header__padding-top * 1.7;
     }
 
     .btn-locale {
-      top: @header__padding-top * 2.4;
+      top: @app-header__padding-top * 2.4;
       font-size: 1rem;
     }
   }

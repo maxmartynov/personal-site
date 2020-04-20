@@ -13,8 +13,6 @@ if (process.env.NODE_ENV !== 'production') {
     filename: '[name].js',
     entry: {
       vendor: [
-        'lodash',
-        'lodash-es',
         'vue',
         'vue-i18n',
         'vue-router',

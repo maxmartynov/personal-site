@@ -1,0 +1,19 @@
+.generate-margins-n-paddings(12);
+
+.generate-margins-n-paddings(@n, @i: 0) when (@i =< @n) {
+  @val: @i * 2px;
+
+  .ma-@{i} { margin: @val; }
+  .mt-@{i} { margin-top: @val; }
+  .mr-@{i} { margin-right: @val; }
+  .mb-@{i} { margin-bottom: @val; }
+  .ml-@{i} { margin-left: @val; }
+
+  .pa-@{i} { padding: @val; }
+  .pt-@{i} { padding-top: @val; }
+  .pr-@{i} { padding-right: @val; }
+  .pb-@{i} { padding-bottom: @val; }
+  .pl-@{i} { padding-left: @val; }
+
+  .generate-margins-n-paddings(@n, (@i + 1));
+}

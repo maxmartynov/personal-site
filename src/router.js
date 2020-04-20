@@ -1,3 +1,6 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
 const routes = [
   {
     name: 'index',
@@ -10,6 +13,10 @@ const routes = [
       {
         name: 'home',
         path: ''
+      },
+      {
+        name: 'about',
+        path: 'about'
       },
       {
         name: 'contacts',
@@ -26,4 +33,10 @@ const routes = [
     redirect: process.env.VUE_APP_BASE_URL || '/'
   }
 ]
-export default routes
+
+Vue.use(VueRouter)
+
+export default new VueRouter({
+  mode: 'history',
+  routes
+})
