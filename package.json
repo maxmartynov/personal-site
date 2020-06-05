@@ -34,10 +34,10 @@
     "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.2.3",
-    "@vue/cli-plugin-eslint": "^4.2.3",
-    "@vue/cli-plugin-pwa": "^4.2.3",
-    "@vue/cli-service": "^4.2.3",
+    "@vue/cli-plugin-babel": "^4.4.1",
+    "@vue/cli-plugin-eslint": "^4.4.1",
+    "@vue/cli-plugin-pwa": "^4.4.1",
+    "@vue/cli-service": "^4.4.1",
     "autodll-webpack-plugin": "^0.4.2",
     "babel-eslint": "^10.1.0",
     "core-js": "^3.5.0",

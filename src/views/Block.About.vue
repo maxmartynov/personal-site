@@ -57,7 +57,7 @@ export default {
           {years: this.experienceYears}
         )
 
-        const firstParagraphIndex = text.indexOf('<br>')
+        const firstParagraphIndex = text.indexOf('<br/>')
         return this.isShowMoreInfo ? text : text.substr(0, firstParagraphIndex)
       }
     },

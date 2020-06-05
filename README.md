@@ -30,7 +30,7 @@ It's built with:
     npm install
     ```
 
-3. Configure environment variables. See [DOC.md](https://bitbucket.org/vovanenok/succeedium-core-backend/src/master/DOC.md#markdown-header-environment-variables).
+3. Configure environment variables.
 
 
 
