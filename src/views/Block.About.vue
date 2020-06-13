@@ -132,12 +132,11 @@ export default {
       display: inline-block;
       text-align: left;
       font-family: @font-family-primary;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       font-weight: 300;
       line-height: 2.2rem;
       padding: 0;
       color: @color-grey-darken-4;
-      letter-spacing: 0.1px;
 
       b {
         color: @color-grey-darken-3;
@@ -148,6 +147,7 @@ export default {
       display: inline-block;
       opacity: 0.8;
       margin-top: 2rem;
+      letter-spacing: 0.1px;
 
       &:hover {
         opacity: 1;

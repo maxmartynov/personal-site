@@ -10,7 +10,7 @@
           :src="require('@/assets/img/logo-github.svg')"
           alt="GitHub"
           title="GitHub"
-          width="11"/>
+          width="15"/>
 
         <span class="ml-2">Source Code</span>
       </a>
