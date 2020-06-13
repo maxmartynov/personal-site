@@ -9,7 +9,7 @@
         :href="btn.href"
         @click="analyticsEvent('press', 'contact.btn', btn.name)"
         target="blank"
-        rel="external">
+        rel="external noopener">
 
         <img
           :src="btn.icon"

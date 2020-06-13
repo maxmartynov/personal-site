@@ -2,6 +2,7 @@
 node_modules
 /dist
 .firebase/*.cache
+*.report.html
 
 # local env files
 .env.local

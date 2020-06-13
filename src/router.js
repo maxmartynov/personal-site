@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Page from '@/views/Page.vue'
 
 const routes = [
   {
@@ -8,7 +9,7 @@ const routes = [
     redirect: {
       name: 'home'
     },
-    component: () => import('@/views/Page.vue'),
+    component: Page,
     children: [
       {
         name: 'home',

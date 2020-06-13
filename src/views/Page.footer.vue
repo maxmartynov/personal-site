@@ -4,7 +4,7 @@
 
   <div class="bottom-block">
     <div class="column ma-0 pl-5 text-left">
-      <a :href="VUE_APP_REPO_URL" rel="external" target="_blank">
+      <a :href="VUE_APP_REPO_URL" rel="external noopener" target="_blank">
         <img
           class="mb-1"
           :src="require('@/assets/img/logo-github.svg')"
