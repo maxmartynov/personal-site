@@ -1,74 +1,20 @@
 <template>
 <div class="contacts-block row unselectable">
   <ul class="social-buttons">
-    <li>
+    <li
+      v-for="btn of btns"
+      :key="btn.name">
+
       <a
+        :href="btn.href"
+        @click="analyticsEvent('press', 'contact.btn', btn.name)"
         target="blank"
-        :href="links.upwork"
-        @click="analyticsEvent('press', 'contact.btn', 'upwork')"
         rel="external">
 
         <img
-          :src="require('@/assets/img/logo-upwork.svg')"
-          alt="Upwork"
-          title="Upwork"/>
-      </a>
-    </li>
-
-    <li>
-      <a
-        target="blank"
-        :href="links.github"
-        @click="analyticsEvent('press', 'contact.btn', 'github')"
-        rel="external">
-
-        <img
-          :src="require('@/assets/img/logo-github.svg')"
-          alt="GitHub"
-          title="GitHub"/>
-      </a>
-    </li>
-
-    <li>
-      <a
-        class="social-link-instagram"
-        target="blank"
-        :href="links.instagram"
-        @click="analyticsEvent('press', 'contact.btn', 'instagram')"
-        rel="external">
-
-        <img
-          :src="require('@/assets/img/logo-instagram.svg')"
-          alt="Instagram"
-          title="Instagram"/>
-      </a>
-    </li>
-
-    <li>
-      <a
-        class="social-link-stackexchange"
-        target="blank"
-        :href="links.stackexchange"
-        @click="analyticsEvent('press', 'contact.btn', 'stackexchange')"
-        rel="external">
-
-        <img
-          :src="require('@/assets/img/logo-stackexchange.svg')"
-          alt="Stack Exchange"
-          title="Stack Exchange"/>
-      </a>
-    </li>
-
-    <li>
-      <a
-        :href="`mailto:${links.email}`"
-        @click="analyticsEvent('press', 'contact.btn', 'email')"
-        rel="external">
-
-        <img
-          :src="require('@/assets/img/logo-mail.svg')"
-          alt="Email"
-          title="Email"/>
+          :src="btn.icon"
+          :alt="btn.label"
+          :title="btn.label"/>
       </a>
     </li>
   </ul>
@@ -84,16 +30,56 @@ export default {
       links: {
         upwork: process.env.VUE_APP_LINK_UPWORK,
         github: process.env.VUE_APP_LINK_GITHUB,
+        linkedin: process.env.VUE_APP_LINK_LINKEDIN,
         instagram: process.env.VUE_APP_LINK_INSTAGRAM,
         stackexchange: process.env.VUE_APP_LINK_STACKEXCHANGE,
         email: process.env.VUE_APP_LINK_EMAIL
-      }
+      },
+      btns: [
+        {
+          name: 'upwork',
+          label: 'Upwork',
+          icon: require('@/assets/img/logo-upwork.svg'),
+          href: process.env.VUE_APP_LINK_UPWORK
+        },
+        {
+          name: 'github',
+          label: 'GitHub',
+          icon: require('@/assets/img/logo-github.svg'),
+          href: process.env.VUE_APP_LINK_GITHUB
+        },
+        {
+          name: 'linkedin',
+          label: 'LinkedIn',
+          icon: require('@/assets/img/logo-linkedin.svg'),
+          href: process.env.VUE_APP_LINK_LINKEDIN
+        },
+        {
+          name: 'instagram',
+          label: 'Instagram',
+          icon: require('@/assets/img/logo-instagram.svg'),
+          href: process.env.VUE_APP_LINK_INSTAGRAM
+        },
+        {
+          name: 'stackexchange',
+          label: 'Stack Exchange',
+          icon: require('@/assets/img/logo-stackexchange.svg'),
+          href: process.env.VUE_APP_LINK_STACKEXCHANGE
+        },
+        {
+          name: 'email',
+          label: 'Email',
+          icon: require('@/assets/img/logo-mail.svg'),
+          href: `mailto:${process.env.VUE_APP_LINK_EMAIL}`
+        }
+      ]
     }
   },
   beforeCreate () {
     preloadImages([
       require('@/assets/img/logo-upwork.svg'),
       require('@/assets/img/logo-github.svg'),
+      require('@/assets/img/logo-linkedin.svg'),
       require('@/assets/img/logo-instagram.svg'),
       require('@/assets/img/logo-stackexchange.svg'),
       require('@/assets/img/logo-mail.svg')
@@ -125,7 +111,7 @@ export default {
 
     li {
       display: inline-block;
-      padding: 0 1rem;
+      padding: 1rem;
       margin: 0;
       cursor: pointer;
 
@@ -140,17 +126,6 @@ export default {
           height: auto;
           opacity: 0.9;
           transition: opacity 0.2s ease-out;
-        }
-
-        &.social-link-instagram img {
-          width: 1.5em;
-          opacity: 0.8;
-        }
-
-        &.social-link-stackexchange img {
-          width: 2.5em;
-          opacity: 0.8;
-          margin-bottom: -0.3rem;
         }
       }
 

@@ -4,22 +4,6 @@
 </div>
 </template>
 
-<script>
-import { preloadImages } from '@/helpers'
-
-export default {
-  beforeCreate () {
-    preloadImages([
-      require('@/assets/img/avatar.png')
-    ])
-  },
-  data () {
-    return {
-    }
-  }
-}
-</script>
-
 <style lang="less">
 .avatar {
   display: inline-block;
@@ -34,6 +18,12 @@ export default {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 600px) {
+  .avatar .image {
+    background-image: url(~@/assets/img/avatar-xs.png);
   }
 }
 </style>
