@@ -23,7 +23,7 @@ const SKILLS = [
   ['divider'],
 
   ['Vue.js', 90],
-  ['AngularJS', 77],
+  ['Angular', 77],
   ['Ionic Framework', 80],
   ['Node.js', 87],
 
