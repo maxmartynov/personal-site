@@ -27,14 +27,6 @@ import { preloadImages } from '@/helpers'
 export default {
   data () {
     return {
-      links: {
-        upwork: process.env.VUE_APP_LINK_UPWORK,
-        github: process.env.VUE_APP_LINK_GITHUB,
-        linkedin: process.env.VUE_APP_LINK_LINKEDIN,
-        instagram: process.env.VUE_APP_LINK_INSTAGRAM,
-        stackexchange: process.env.VUE_APP_LINK_STACKEXCHANGE,
-        email: process.env.VUE_APP_LINK_EMAIL
-      },
       btns: [
         {
           name: 'upwork',

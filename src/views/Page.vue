@@ -44,8 +44,8 @@ export default {
 @import url("~@/styles/_variables.less");
 
 .app-container {
-  height: 100vh;
-  min-height: 100vh;
+  height: 100%;
+  min-height: 100%;
   position: relative;
 
   > .wrap {
