@@ -7,7 +7,9 @@ export default {
   home: {
     content: {
       text_about: `
-        I'm a freelance Web Developer with over {years} years of experience in the IT industry, with main focus on <b>JavaScript</b> and its related ecosystem.
+        I'm a freelance Web Developer with {years} years of experience in the IT industry. I help startups launch and grow their products.
+        <br/><br/>
+        My main focus is on <b>JavaScript</b> and its related ecosystem.
         <br/><br/>
         As a <b>Full-Stack Developer</b>, I specialize in apps based on Node.js, Vue.js and Angular. I'm able to build a completed solution from sketches to production.
         <br/><br/>

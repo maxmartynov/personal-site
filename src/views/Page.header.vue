@@ -1,6 +1,6 @@
 <template>
 <div class="page-header row">
-  <div class="logo-wrapper row">
+  <div class="logo-wrapper row" @click="$router.push('/')">
     <h1 class="row logo">
       Max Martynov
     </h1>
