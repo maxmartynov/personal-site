@@ -54,7 +54,7 @@
     "express": "^4.16.4",
     "express-http-proxy": "^1.5.1",
     "fibers": "^4.0.2",
-    "firebase-tools": "^7.15.1",
+    "firebase-tools": "^9.6.1",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "lighthouse": "^6.0.0",
