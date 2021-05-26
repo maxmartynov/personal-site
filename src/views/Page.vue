@@ -1,11 +1,11 @@
 <template>
 <div class="app-container container">
   <div class="wrap row">
-    <app-header></app-header>
-    <app-content></app-content>
+    <AppHeader/>
+    <AppContent/>
   </div>
 
-  <app-footer></app-footer>
+  <AppFooter/>
 </div>
 </template>
 

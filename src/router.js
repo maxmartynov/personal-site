@@ -20,10 +20,6 @@ const routes = [
         path: 'about'
       },
       {
-        name: 'contacts',
-        path: 'contacts'
-      },
-      {
         name: 'skills',
         path: 'skills'
       }

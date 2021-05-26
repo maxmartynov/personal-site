@@ -22,10 +22,10 @@ const SKILLS = [
 
   ['divider'],
 
-  ['Vue.js', 90],
+  ['Vue.js', 95],
   ['Angular', 77],
   ['Ionic Framework', 80],
-  ['Node.js', 87],
+  ['Node.js', 90],
 
   ['divider'],
 
@@ -33,7 +33,7 @@ const SKILLS = [
   // ['Prototyping', 75],
   // ['Machine Learning', 55],
   ['Design', 70],
-  ['DevOps', 60],
+  ['DevOps', 75],
 
   ['divider'],
 

@@ -137,6 +137,7 @@ export default {
       line-height: 2.2rem;
       padding: 0;
       color: @color-grey-darken-4;
+      text-align: center;
 
       b {
         color: @color-grey-darken-3;
@@ -197,6 +198,10 @@ export default {
       text-align: center;
       height: 100%;
       mask-image: linear-gradient(to bottom, #fff calc(100% - 10rem), transparent 100%);
+
+      .main-text {
+        text-align: left;
+      }
     }
   }
 }

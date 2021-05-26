@@ -6,11 +6,20 @@
     'scenario scenario--skills': $route.name === 'skills'
   }">
 
+  <div
+    v-show="$route.name === 'home'"
+    class="side-menu"
+  >
+    <a
+      href="/skills"
+      v-text="$t('Skills')"
+      @click.prevent="$router.push('skills')"
+    />
+  </div>
+
   <BlockAbout
     :overlap-text="aboutTextOverlapMessage"
-    :two-cols="$route.name === 'contacts'"/>
-
-  <BlockContacts v-if="$route.name === 'contacts'"/>
+  />
 
   <BlockSkillsChart
     v-if="$route.name === 'skills'"
@@ -21,23 +30,18 @@
 
 <script>
 import BlockAbout from './Block.About.vue'
-import BlockContacts from './Block.Contacts.vue'
 import BlockSkillsChart from './Block.SkillsChart.vue'
 
 export default {
   components: {
     BlockAbout,
     BlockSkillsChart,
-    BlockContacts
   },
   computed: {
     aboutTextOverlapMessage () {
-      if (this.$route.name === 'contacts') {
-        return this.$t('home.content.text_contacts')
-      } else if (this.$route.name === 'skills') {
+      if (this.$route.name === 'skills') {
         return this.$t('home.content.text_skills')
       }
-
       return false
     }
   }
@@ -72,13 +76,41 @@ export default {
       overflow: hidden;
     }
   }
-}
 
-.page-content * {
-  transition: all 0.2s ease-out;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
+  .side-menu {
+    position: fixed;
+    right: 0;
+    top: calc(@app-header__height + 2rem);
+    list-style: none;
+    z-index: 100;
+
+    a {
+      display: block;
+      background: @color-grey-darken-4;
+      padding: 0.2rem 1.5rem;
+      position: relative;
+      height: 2.2rem;
+      transition: padding 0.2s ease-out;
+      color: #fff;
+      text-decoration: none;
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: -0.5rem;
+        top: 0;
+        border-top: 1.3rem solid transparent;
+        border-right: 0.5rem solid @color-grey-darken-4;
+        border-bottom: 1.3rem solid transparent;
+      }
+
+      &:hover {
+        padding-right: 2.5rem;
+      }
+    }
+  }
 }
 
 .page-content.scenario--contacts,

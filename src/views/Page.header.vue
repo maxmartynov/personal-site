@@ -70,6 +70,7 @@ export default {
   .logo-wrapper {
     padding-top: @app-header__padding-top;
     display: inline-block;
+    cursor: pointer;
 
     .logo {
       margin: 0;
@@ -81,10 +82,6 @@ export default {
 
       &:hover {
         color: @color-grey-darken-3;
-        transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
-        -webkit-transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
-        -moz-transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
-        -o-transition: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
       }
     }
 

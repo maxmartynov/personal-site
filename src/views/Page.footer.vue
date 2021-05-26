@@ -1,6 +1,11 @@
 <template>
-<div class="page-footer">
-  <app-navbar></app-navbar>
+<div
+  class="page-footer"
+  :class="{'page-footer--mobile': isMobile}"
+>
+  <AppNavbar/>
+
+  <BlockContacts v-show="isShowContacts" />
 
   <div class="bottom-block">
     <div class="column ma-0 pl-5 text-left">
@@ -10,7 +15,9 @@
           :src="require('@/assets/img/logo-github.svg')"
           alt="GitHub"
           title="GitHub"
-          width="15"/>
+          width="15"
+          height="15"
+        />
 
         <span class="ml-2">Source Code</span>
       </a>
@@ -25,15 +32,45 @@
 
 <script>
 import AppNavbar from './Page.navbar.vue'
+import BlockContacts from './Block.Contacts.vue'
 
 export default {
   components: {
-    AppNavbar
+    AppNavbar,
+    BlockContacts,
   },
   data () {
     return {
       year: new Date().getFullYear(),
-      VUE_APP_REPO_URL: process.env.VUE_APP_REPO_URL
+      VUE_APP_REPO_URL: process.env.VUE_APP_REPO_URL,
+      window: {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      }
+    }
+  },
+  computed: {
+    isMobile () {
+      return this.window.width < 800 || this.window.height < 550
+    },
+    isShowContacts () {
+      return !this.isMobile || this.$route.name === 'home'
+    }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onWindowResize)
+    })
+  },
+  beforeDestroy () {
+    window.removeEventListener('resize', this.onWindowResize)
+  },
+  methods: {
+    onWindowResize () {
+      this.window = {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      }
     }
   }
 }
@@ -56,13 +93,26 @@ export default {
   font-size: 1.1rem;
 
   .page-navbar {
-    height: calc(@app-footer__height - @page-footer__bottom-block__height);
-    padding-top: 3rem;
+    button {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .contacts-block {
+    position: relative;
+    margin-top: 0.4rem;
+    z-index: 10;
   }
 
   .bottom-block {
     height: @page-footer__bottom-block__height;
     line-height: @page-footer__bottom-block__height;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
 
     .column {
       width: 50%;
@@ -82,16 +132,18 @@ export default {
       }
     }
   }
+
+  &--mobile {
+    .page-navbar {
+      margin-top: 3rem;
+    }
+  }
 }
 
 @media (max-width: 550px) {
   .page-footer {
     height: @app-footer__height--small;
     font-size: 1rem;
-
-    .page-navbar {
-      height: calc(@app-footer__height--small - @page-footer__bottom-block__height);
-    }
 
     .bottom-block {
       margin-left: -1rem;
@@ -106,6 +158,12 @@ export default {
         }
       }
     }
+
+    &--mobile {
+      .page-navbar {
+        margin-top: 1rem;
+      }
+    }
   }
 }
 
@@ -114,8 +172,10 @@ export default {
     height: @app-footer__height--extra-small;
     font-size: 1rem;
 
-    .page-navbar {
-      height: calc(@app-footer__height--extra-small - @page-footer__bottom-block__height);
+    &--mobile {
+      .page-navbar {
+        margin-top: 0;
+      }
     }
   }
 }
