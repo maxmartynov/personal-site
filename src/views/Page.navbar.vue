@@ -1,11 +1,5 @@
 <template>
 <div class="page-navbar">
-  <!-- <button
-    v-if="$route.name === 'home'"
-    @click="$router.push('skills')"
-    v-text="$t('Skills')">
-  </button> -->
-
   <button
     v-if="$route.name !== 'home'"
     @click="$router.push('home')"

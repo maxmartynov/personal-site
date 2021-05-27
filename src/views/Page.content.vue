@@ -80,18 +80,19 @@ export default {
   .side-menu {
     position: fixed;
     right: 0;
-    top: calc(@app-header__height + 2rem);
+    top: calc(@app-header__height + 4rem);
     list-style: none;
     z-index: 100;
 
     a {
       display: block;
-      background: @color-grey-darken-4;
-      padding: 0.2rem 1.5rem;
+      padding: 0 1.5rem;
       position: relative;
-      height: 2.2rem;
+      height: 3rem;
+      line-height: 3rem;
       transition: padding 0.2s ease-out;
       color: #fff;
+      background: @color-grey-darken-4;
       text-decoration: none;
 
       &:after {
@@ -99,15 +100,16 @@ export default {
         width: 0;
         height: 0;
         position: absolute;
-        left: -0.5rem;
+        left: -0.7rem;
         top: 0;
-        border-top: 1.3rem solid transparent;
-        border-right: 0.5rem solid @color-grey-darken-4;
-        border-bottom: 1.3rem solid transparent;
+        border-top: 1.5rem solid transparent;
+        border-right: 0.7rem solid @color-grey-darken-4;
+        border-bottom: 1.5rem solid transparent;
       }
 
       &:hover {
         padding-right: 2.5rem;
+        color: @color-grey-lighten-2;
       }
     }
   }
@@ -177,6 +179,12 @@ export default {
 }
 
 @media (max-width: 550px) {
+  .page-content {
+    .side-menu {
+      top: calc(@app-header__height + 2rem);
+    }
+  }
+
   .page-content.scenario--contacts,
   .page-content.scenario--skills {
     .block-about {

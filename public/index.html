@@ -39,7 +39,18 @@
       </strong>
     </noscript>
 
-    <div id="app"></div>
+    <div id="app">
+
+      <!-- Section for SEO -->
+      <div style="position: absolute; left: 0px; bottom: 0; width: 100%; color: #dddddd; text-align: center;">
+        <h1 style="font-size: 7px; line-height: 1em; margin: 0; display: inline;">
+          <%= VUE_APP_META_TITLE %>
+        </h1>
+        <p style="font-size: 7px; line-height: 1em; margin: 0 0 0 10px; display: inline;">
+          <%= VUE_APP_META_DESCRIPTION %>
+        </p>
+      </div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>

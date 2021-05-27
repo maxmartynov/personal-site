@@ -89,7 +89,7 @@ export default {
   height: @app-footer__height;
   text-align: center;
   overflow: hidden;
-  color: @color-grey-darken-3;
+  color: @color-grey-base;
   font-size: 1.1rem;
 
   .page-navbar {
@@ -120,15 +120,25 @@ export default {
 
     a {
       opacity: .8;
-      color: #000;
+      color: @color-grey-base;
+      transition: opacity 0.2s ease-out, color 0.2s ease-out;
 
-      &:hover {
-        opacity: 1;
+      img {
+        opacity: .5;
       }
 
       span,
       img {
         vertical-align: middle;
+      }
+
+      &:hover {
+        color: @color-grey-darken-3;
+        opacity: 1;
+
+        img {
+          opacity: 1;
+        }
       }
     }
   }
