@@ -17,7 +17,7 @@
           :alt="btn.label"
           :title="btn.label"
           width="34"
-          heigth="34"
+          height="34"
         />
       </a>
     </li>
