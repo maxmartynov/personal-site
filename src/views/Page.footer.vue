@@ -12,7 +12,7 @@
       <a :href="VUE_APP_REPO_URL" rel="external noopener" target="_blank">
         <img
           class="mb-1"
-          :src="require('@/assets/img/logo-github.svg')"
+          :src="'/img/logo-github.svg'"
           alt="GitHub"
           title="GitHub"
           width="15"

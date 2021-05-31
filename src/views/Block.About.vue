@@ -5,7 +5,7 @@
     'mode--two-cols': isShowMoreInfo
   }">
 
-  <Avatar/>
+  <Avatar :alt="VUE_APP_AUTHOR_NAME"/>
 
   <div class="content">
     <hr class="divider-horisontal">
@@ -38,7 +38,8 @@ export default {
   },
   data () {
     return {
-      experienceYears: new Date(new Date() - new Date('01/01/2013')).getFullYear() - 1970
+      experienceYears: new Date(new Date() - new Date('01/01/2013')).getFullYear() - 1970,
+      VUE_APP_AUTHOR_NAME: process.env.VUE_APP_AUTHOR_NAME,
     }
   },
   computed: {
@@ -191,7 +192,7 @@ export default {
     .content {
       display: inline-block;
       vertical-align: top;
-      margin-top: 0;
+      margin-top: 1rem;
       padding-top: 0;
       padding-bottom: 10rem;
       width: 75%;

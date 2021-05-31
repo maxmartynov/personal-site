@@ -1,8 +1,25 @@
 <template>
 <div class="avatar">
-  <div class="image"></div>
+  <img
+    srcset="/img/avatar-xs.png 500w,
+            /img/avatar.png 624w"
+    sizes="(max-width: 600px) 250px, 312px"
+    :alt="alt"
+    width="200px"
+    height="200px"
+  />
 </div>
 </template>
+
+<script>
+export default {
+  props: {
+    alt: {
+      type: String
+    }
+  }
+}
+</script>
 
 <style lang="less">
 .avatar {
@@ -11,19 +28,9 @@
   width: 10em;
   height: 10em;
 
-  .image {
+  img {
     width: 100%;
-    height: 100%;
-    background-image: url(~@/assets/img/avatar.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-}
-
-@media (max-width: 600px) {
-  .avatar .image {
-    background-image: url(~@/assets/img/avatar-xs.png);
+    height: auto;
   }
 }
 </style>
