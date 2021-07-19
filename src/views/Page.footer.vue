@@ -11,12 +11,12 @@
     <div class="column ma-0 pl-5 text-left">
       <a :href="VUE_APP_REPO_URL" rel="external noopener" target="_blank">
         <img
-          class="mb-1"
+          class="icon-img"
           :src="'/img/logo-github.svg'"
           alt="GitHub"
           title="GitHub"
-          width="15"
-          height="15"
+          width="10"
+          height="10"
         />
 
         <span class="ml-2">Source Code</span>
@@ -24,7 +24,7 @@
     </div>
 
     <div class="column ma-0 pr-5 text-right">
-      © 2013-{{ year }} &mdash; Maksim Martynov
+      © {{ year }} Martynov Maksim
     </div>
   </div>
 </div>
@@ -118,6 +118,12 @@ export default {
       width: 50%;
     }
 
+    .icon-img {
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-bottom: 0.1rem;
+    }
+
     a {
       opacity: .8;
       color: @color-grey-base;
@@ -147,13 +153,21 @@ export default {
     .page-navbar {
       margin-top: 3rem;
     }
+
+    .bottom-block {
+      .icon-img {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
 @media (max-width: 550px) {
   .page-footer {
     height: @app-footer__height--small;
-    font-size: 1rem;
+    font-size: 0.6em;
 
     .bottom-block {
       margin-left: -1rem;
@@ -180,7 +194,7 @@ export default {
 @media (max-height: 550px) {
   .page-footer {
     height: @app-footer__height--extra-small;
-    font-size: 1rem;
+    font-size: 0.6em;
 
     &--mobile {
       .page-navbar {

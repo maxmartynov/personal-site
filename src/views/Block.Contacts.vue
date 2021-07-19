@@ -107,6 +107,7 @@ export default {
 .contacts-block {
   text-align: center;
   animation: fadein .5s;
+  font-size: 1.8rem;
 
   .social-buttons {
     list-style: none;
@@ -114,16 +115,18 @@ export default {
     padding: 0;
     margin: 0;
     display: inline-block;
+    font-size: inherit;
 
     li {
       display: inline-block;
-      padding: 1rem;
+      padding: 0.5em;
       margin: 0;
       cursor: pointer;
+      font-size: inherit;
 
       a {
         cursor: pointer;
-        font-size: 2rem;
+        font-size: inherit;
         transition: opacity 0.2s ease-out;
 
         img {
@@ -139,7 +142,7 @@ export default {
         display: block;
 
         a {
-          font-size: 1.4rem;
+          font-size: 0.7em;
           line-height: 1.4em;
         }
       }

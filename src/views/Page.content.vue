@@ -2,6 +2,7 @@
 <div
   class="page-content row"
   :class="{
+    'scenario scenario--about': $route.name === 'about',
     'scenario scenario--contacts': $route.name === 'contacts',
     'scenario scenario--skills': $route.name === 'skills'
   }">
@@ -168,7 +169,7 @@ export default {
 
   .block-about {
     .content {
-      padding-bottom: 8rem;
+      padding-bottom: 5rem;
       mask-image: none;
     }
   }

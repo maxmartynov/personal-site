@@ -102,9 +102,9 @@ export default {
   box-sizing: border-box;
 
   .avatar {
-    padding: 3rem 0 1.5rem;
+    padding: 4rem 0 1.5rem;
     width: 20rem;
-    left: calc(50% - 10rem);
+    left: calc(50% - (20rem / 2));
     max-height: 20rem;
     height: 25vh;
     position: absolute;
@@ -114,7 +114,7 @@ export default {
 
   .content {
     max-width: 65ch;
-    margin-top: calc(25vh + 4rem);
+    margin-top: calc(25vh + 6rem);
     overflow-y: auto;
     padding: 2em 1em 2em;
     box-sizing: border-box;
@@ -208,12 +208,26 @@ export default {
 }
 
 @media (max-width: 550px) {
+  .block-about {
+    .avatar {
+      padding-top: 5rem;
+      width: 16rem;
+      left: calc(50% - (16rem / 2));
+    }
+  }
+
+  .block-about,
+  .block-about.mode--two-cols {
+    .content {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0.3em;
+    }
+  }
+
   .block-about.mode--two-cols {
     .avatar {
       display: none;
-    }
-    .content {
-      width: 100%;
     }
   }
 }
@@ -226,15 +240,33 @@ export default {
   }
 }
 
+@media (max-height: 650px) {
+  .block-about {
+    .avatar {
+      padding-top: 4rem;
+      width: 14rem;
+      left: calc(50% - (14rem / 2));
+    }
+    .content {
+      margin-top: calc(14rem + 3rem);
+      padding-bottom: 1rem;
+
+      a {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
 @media (max-height: 550px) {
   .block-about {
     .avatar {
-      padding-top: 0;
-      width: 8rem;
-      left: calc(50% - 4rem);
+      padding-top: 3rem;
+      width: 10rem;
+      left: calc(50% - (10rem / 2));
     }
     .content {
-      margin-top: calc(23vh);
+      margin-top: calc(10rem + 1rem);
       padding-bottom: 1rem;
 
       a {
