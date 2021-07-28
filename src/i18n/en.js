@@ -13,7 +13,7 @@ export default {
         <br/><br/>
         As a <b>Full-Stack Developer</b>, I specialize in apps based on Node.js, Vue.js and Angular. I'm able to build a completed solution from sketches to production.
         <br/><br/>
-        My second specialization is building <b>Cross-platform Mobile Applications</b> with the use of Ionic Framework (Angular/Cordova).
+        My second specialization is building <b>Cross-platform Mobile Applications</b> with the use of Flutter SDK (Dart) & Ionic Framework (Angular/Cordova).
         <br/><br/>
         I have a great experience in <b>UI/UX</b> and I'm well-versed in matters of typography, whitespace, color selection, and some of best practices. I do produce prototypes of my own as well, but my focus is always more geared toward mechanics and cost since I don't classify myself as a Web Designer.
         <br/><br/>

@@ -18,26 +18,28 @@
 <script>
 const SKILLS = [
   ['JavaScript', 97],
+  ['Node.js', 90],
   ['HTML/CSS', 96],
+  ['Dart', 75],
 
   ['divider'],
 
   ['Vue.js', 95],
-  ['Angular', 77],
-  ['Ionic Framework', 80],
-  ['Node.js', 90],
+  ['Flutter', 85],
+  ['Angular', 75],
+  ['Ionic Framework', 75],
 
   ['divider'],
 
   // ['Wireframing', 50],
   // ['Prototyping', 75],
   // ['Machine Learning', 55],
-  ['Design', 70],
-  ['DevOps', 75],
+  ['Design', 75],
+  ['DevOps', 85],
 
   ['divider'],
 
-  ['Communication', 90],
+  ['Communication', 95],
   ['Self-management', 87],
   ['Team management', 80],
 
