@@ -17,8 +17,8 @@
 
 <script>
 const SKILLS = [
-  ['JavaScript', 97],
-  ['Node.js', 90],
+  ['JavaScript', 99],
+  ['Node.js', 94],
   ['HTML/CSS', 96],
   ['Dart', 75],
 
@@ -39,8 +39,8 @@ const SKILLS = [
 
   ['divider'],
 
-  ['Communication', 95],
-  ['Self-management', 87],
+  ['Communication', 93],
+  ['Self-management', 97],
   ['Team management', 80],
 
   ['divider'],
@@ -88,15 +88,15 @@ export default {
       position: relative;
       z-index: 2;
       width: 0%;
-      height: 2.5rem;
-      line-height: 3.2rem;
+      height: 2.8rem;
+      line-height: 3.6rem;
       text-indent: 1rem;
       text-align: left;
       max-width: 0px;
       min-width: 0px;
       margin: 0.5rem 0;
       padding: 0;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       background-color: @color-grey-darken-4;
       color: #fff;
       font-family: @font-family-primary;
@@ -110,7 +110,7 @@ export default {
       &.divider {
         width: 100%;
         opacity: 0;
-        height: 0.5rem;
+        height: 1rem;
       }
 
       &:first-child {
@@ -127,12 +127,6 @@ export default {
         max-width: 200% !important;
       }
     }
-  }
-}
-
-@media (max-width: 40rem) {
-  .skills-chart ul li {
-    font-size: 1.2rem !important;
   }
 }
 </style>
