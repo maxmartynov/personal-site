@@ -1,6 +1,6 @@
 <template>
 <div class="contacts-block row">
-  <ul class="social-buttons unselectable">
+  <ul class="contacts-block__buttons unselectable">
     <li
       v-for="btn of btns"
       :key="btn.name"
@@ -109,7 +109,7 @@ export default {
   animation: fadein .5s;
   font-size: 1.8rem;
 
-  .social-buttons {
+  .contacts-block__buttons {
     list-style: none;
     text-align: center;
     padding: 0;
