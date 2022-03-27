@@ -61,12 +61,13 @@ export default {
           icon: '/img/logo-linkedin.svg',
           href: process.env.VUE_APP_LINK_LINKEDIN,
         },
-        {
-          name: 'instagram',
-          label: 'Instagram',
-          icon: '/img/logo-instagram.svg',
-          href: process.env.VUE_APP_LINK_INSTAGRAM,
-        },
+        // INFO: temporarily hide
+        // {
+        //   name: 'instagram',
+        //   label: 'Instagram',
+        //   icon: '/img/logo-instagram.svg',
+        //   href: process.env.VUE_APP_LINK_INSTAGRAM,
+        // },
         {
           name: 'stackexchange',
           label: 'Stack Exchange',
