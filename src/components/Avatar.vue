@@ -1,8 +1,8 @@
 <template>
 <div class="avatar">
   <img
-    srcset="/img/avatar-xs.png 500w,
-            /img/avatar.png 624w"
+    srcset="/img/avatar-xs.jpg 500w,
+            /img/avatar.jpg 624w"
     sizes="(max-width: 600px) 250px, 312px"
     :alt="alt"
     width="200px"
@@ -31,6 +31,7 @@ export default {
   img {
     width: 100%;
     height: auto;
+    border-radius: 50%;
   }
 }
 </style>
