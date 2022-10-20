@@ -7,7 +7,7 @@ export default {
   home: {
     content: {
       text_about: `
-        I'm a freelance Web Developer with {years} years of experience in the IT industry. I help startups launch and grow their products.
+        The guy who will kick your shit until&nbsp;it&nbsp;flies. Web&nbsp;Engineer for disruptive&nbsp;startups. {years} years in IT, 25+&nbsp;startups&nbsp;from&nbsp;8&nbsp;countries, too&nbsp;many&nbsp;users&nbsp;to&nbsp;count.
         <br/><br/>
         My main focus is on <b>JavaScript</b> and its related ecosystem.
         <br/><br/>
