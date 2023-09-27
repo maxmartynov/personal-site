@@ -7,7 +7,7 @@ export default {
   home: {
     content: {
       text_about: `
-        The guy who will kick your shit until&nbsp;it&nbsp;flies. Web&nbsp;Engineer for disruptive&nbsp;startups. {years} years in IT, 25+&nbsp;startups&nbsp;from&nbsp;8&nbsp;countries, too&nbsp;many&nbsp;users&nbsp;to&nbsp;count.
+        The guy who will kick your shit until&nbsp;it&nbsp;flies. Web&nbsp;Engineer for disruptive&nbsp;startups. {years} years in IT, 25+&nbsp;startups&nbsp;from&nbsp;14&nbsp;countries, too&nbsp;many&nbsp;users&nbsp;to&nbsp;count.
         <br/><br/>
         My main focus is on <b>JavaScript</b> and its related ecosystem.
         <br/><br/>
