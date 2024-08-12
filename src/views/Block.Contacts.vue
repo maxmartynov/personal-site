@@ -50,6 +50,12 @@ export default {
           href: process.env.VUE_APP_LINK_UPWORK,
         },
         {
+          name: 'telegram',
+          label: 'Telegram',
+          icon: '/img/logo-telegram.svg',
+          href: 'https://ttttt.me/maxmartynov_channel',
+        },
+        {
           name: 'github',
           label: 'GitHub',
           icon: '/img/logo-github.svg',
@@ -90,6 +96,7 @@ export default {
       '/img/logo-linkedin.svg',
       '/img/logo-instagram.svg',
       '/img/logo-stackexchange.svg',
+      '/img/logo-telegram.svg',
     ])
   },
   methods: {
